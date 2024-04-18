@@ -5,12 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Books</title>
+    <style>
+        /* Styling for body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2; /* Light gray background */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styling for header */
+        h1 {
+            text-align: center;
+            color: #333; /* Dark gray text color */
+            margin-top: 50px;
+        }
+
+        /* Styling for list */
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+
+        /* Styling for list items */
+        li {
+            background-color: #fff; /* White background */
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+        }
+
+        /* Styling for book title */
+        .book-title {
+            font-weight: bold;
+            color: #007bff; /* Blue text color */
+        }
+
+        /* Styling for book author */
+        .book-author {
+            color: #555; /* Dark gray text color */
+        }
+    </style>
 </head>
 <body>
     <h1>Books</h1>
     <ul>
         {% for book in books %}
-            <li>{{ book.title }} - {{ book.author }}</li>
+            <li>
+                <span class="book-title">{{ book.title }}</span> - <span class="book-author">{{ book.author }}</span>
+            </li>
         {% endfor %}
     </ul>
 </body>
